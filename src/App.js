@@ -14,7 +14,7 @@ const App = () => {
 	const [cvc, setCvc] = useState("");
 	const [focus, setFocus] = useState("");
 	const [allEnt, setAllEnt] = useState([]);
-	const [respdata, setRespData] = useState();
+	// const [respdata, setRespData] = useState();
 
 	// const [error, setError] = useState("");
 	// api ........
@@ -78,7 +78,7 @@ const App = () => {
 					className="header_image"
 				/>
 
-				<h5 className="app_heading mt-4">INSTA CRED APP </h5>
+				<h5 className="app_heading mt-4">CRED APP 💳 </h5>
 				{/* 5 props passed in below React-Card */}
 				<Cards
 					number={number}
@@ -91,23 +91,11 @@ const App = () => {
 				{/*Main Container starts from here */}
 				<div className="form-container">
 					<form action="" onSubmit={submitData}>
-						<strong>Account Number :</strong>
-						<input
-							type="number"
-							name="number"
-							placeholder="Please Enter your Card Number"
-							value={number}
-							onChange={(e) => setNumber(e.target.value)}
-							onFocus={(e) => setFocus(e.target.name)}
-							required
-						/>
-						<br />
-
-						<strong>Account Holder Name :</strong>
+						{/* <strong>Account Holder Name :</strong> */}
 						<input
 							type="text"
 							name="name"
-							placeholder="Enter Name Here"
+							placeholder="Account Holder Name"
 							value={name}
 							onChange={(e) => setName(e.target.value)}
 							onFocus={(e) => setFocus(e.target.name)}
@@ -115,7 +103,19 @@ const App = () => {
 						/>
 						<br />
 
-						<strong>Expiry :</strong>
+						{/* <strong>Account Number :</strong> */}
+						<input
+							type="number"
+							name="number"
+							placeholder="Card Number"
+							value={number}
+							onChange={(e) => setNumber(e.target.value)}
+							onFocus={(e) => setFocus(e.target.name)}
+							required
+						/>
+						<br />
+
+						{/* <strong>Expiry :</strong> */}
 						<input
 							type="number"
 							name="expiry"
@@ -128,7 +128,7 @@ const App = () => {
 						/>
 						<br />
 
-						<strong>CVV :</strong>
+						{/* <strong>CVV :</strong> */}
 						<input
 							type="number"
 							name="cvc"
@@ -151,7 +151,7 @@ const App = () => {
 								<div className="showDetails mt-4">
 									<p>{`💳 Your Credit Card Number:${currElem.number}`}</p>
 									<p>{`🧑 ‍Your Name :${currElem.name}`}</p>
-									<p>{`🤯 Your Expiry Date is :${currElem.expiry}`}</p>
+									<p>{`🔺💳 Your Expiry Date is :${currElem.expiry}`}</p>
 									<p>{`💳 Your CVV number is :${currElem.cvc}`}</p>
 								</div>
 							);
